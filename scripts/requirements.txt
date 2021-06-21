@@ -17,6 +17,7 @@ pgi; sys_platform == 'linux'
 pyobjc-core; sys_platform == 'darwin'
 pyobjc-framework-cocoa; sys_platform == 'darwin'
 pyobjc-framework-corebluetooth; sys_platform == 'darwin'
+pybind11; sys_platform == 'linux'
 
 # mobly tests
 portpicker

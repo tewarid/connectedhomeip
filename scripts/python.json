@@ -8,5 +8,6 @@
         "path": "fuchsia/third_party/cmake/${platform}",
         "platforms": ["mac-amd64", "linux-amd64"],
         "tags": ["version:3.20.20210428-g857373c"]
+
     }
 ]

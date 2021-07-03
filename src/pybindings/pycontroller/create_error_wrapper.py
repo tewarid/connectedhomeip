@@ -90,7 +90,7 @@ def create_error_bindings(error_path, config_path, header_out, cpp_out):
         config_header = f.read()
 
     if error_header != None and config_header != None:
-        min_err_re = re.compile(r'CHIP_CONFIG_ERROR_MIN (\d+)')
+        min_err_re = re.compile(r'CHIP_CONFIG_CORE_ERROR_MIN (\d+)')
         matches = min_err_re.findall(config_header)
 
         min_err = -1

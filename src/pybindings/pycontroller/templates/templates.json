@@ -26,12 +26,12 @@
         {
             "path": "python-CHIPClusters-cpp.zapt",
             "name": "CHIP ZCL API for Python (native code)",
-            "output": "src/pybinds/pycontroller/clusters/CHIPClusters.cpp"
+            "output": "src/pybindings/pycontroller/clusters/CHIPClusters.cpp"
         },
         {
             "path": "python-CHIPClusters-py.zapt",
             "name": "CHIP ZCL API for Python",
-            "output": "src/pybinds/pycontroller/clusters/CHIPClusters.py"
+            "output": "src/pybindings/pycontroller/clusters/CHIPClusters.py"
         }
     ]
 }

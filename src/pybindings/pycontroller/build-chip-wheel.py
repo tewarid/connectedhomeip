@@ -56,8 +56,8 @@ packageName = args.package_name
 chipPackageVer = args.build_number
 
 installScripts = [
-    InstalledScriptInfo('chip-device-ctrl.py'),
-    InstalledScriptInfo('chip-repl.py'),
+    # InstalledScriptInfo('chip-device-ctrl.py'),
+    # InstalledScriptInfo('chip-repl.py'),
 ]
 
 # Record the current directory at the start of execution.

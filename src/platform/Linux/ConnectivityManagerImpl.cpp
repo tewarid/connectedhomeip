@@ -940,15 +940,15 @@ CHIP_ERROR ConnectivityManagerImpl::ProvisionWiFiNetwork(const char * ssid, cons
             // Run dhclient for IP on WiFi.
             // TODO: The wifi can be managed by networkmanager on linux so we don't have to care about this.
             char cmdBuffer[128];
-            sprintf(cmdBuffer, "dhclient -nw %s", CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME);
-            int dhclientSystemRet = system(cmdBuffer);
-            if (dhclientSystemRet != 0)
+            sprintf(cmdBuffer, "udhcpc -i %s", CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME);
+            int dhcpClientSystemRet = system(cmdBuffer);
+            if (dhcpClientSystemRet != 0)
             {
-                ChipLogError(DeviceLayer, "Failed to run dhclient, system() returns %d", dhclientSystemRet);
+                ChipLogError(DeviceLayer, "Failed to run udhcpc, system() returns %d", dhcpClientSystemRet);
             }
             else
             {
-                ChipLogProgress(DeviceLayer, "dhclient is running on the %s interface.", CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME);
+                ChipLogProgress(DeviceLayer, "udhcpc is running on the %s interface.", CHIP_DEVICE_CONFIG_WIFI_STATION_IF_NAME);
             }
 
             // Return success as long as the device is connected to the network

@@ -60,9 +60,9 @@ config("abi_default") {
     if (current_cpu == "arm" || current_cpu == "arm64") {
       if (current_os == "linux" && is_clang) {
         if (current_cpu == "arm") {
-          cflags += [ "--target=armv7-linux-gnueabihf" ]
+          #cflags += [ "--target=armv7-linux-gnueabihf" ]
         } else if (current_cpu == "arm64") {
-          cflags += [ "--target=aarch64-linux-gnu" ]
+          #cflags += [ "--target=aarch64-linux-gnu" ]
         }
       }
 
